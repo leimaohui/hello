@@ -9,9 +9,6 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-20.04
-    steps:
-    - name: checkout
-      uses: actions/checkout@master
     outputs:
       output1: ${{ steps.step1.outputs.test }}
       output2: ${{ steps.step2.outputs.test }}
