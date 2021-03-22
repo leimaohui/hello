@@ -16,6 +16,6 @@ jobs:
     - run: cat /proc/meminfo
     - run: cat /proc/cpuinfo
     - run: fdisk -l
-    - run: gcc -o hello -c main.c
+    - run: gcc main.c -o hello
     - run: ls ./
     - run: ./hello
