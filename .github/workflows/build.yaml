@@ -17,4 +17,4 @@ jobs:
     - run: cat /proc/cpuinfo
     - run: gcc main.c -o hello1
     - run: ls ./
-    - run: ./hello
+    - run: ./hello1
