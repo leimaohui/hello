@@ -1,0 +1,20 @@
+name: Build  
+on: 
+  push: 
+    branches: 
+      - master # 只在master上push触发部署 
+    paths-ignore: # 下列文件的变更不触发部署，可以自行添加 
+      - README.md 
+      - LICENSE 
+jobs:
+  job1:
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+
+    - run: uname -a
+    - run: cat /proc/meminfo
+    - run: cat /proc/cpuinfo
+    - run: gcc main.c -o hello1
+    - run: ls ./
+    - run: ./hello1
